@@ -10,7 +10,7 @@ module.exports = function multiply(first, second) {
             multiplyMas[i + j] ? multiplyMas[i + j] += number : multiplyMas[i + j] = number;
             if(multiplyMas[i + j] >= 10)
             {
-                multiplyMas[i + j - 1] += Math.floor(multiplyMas[i + j] / 10);
+                multiplyMas[i + j - 1] ? multiplyMas[i + j - 1] += Math.floor(multiplyMas[i + j] / 10) : multiplyMas[i + j - 1] = Math.floor(multiplyMas[i + j] / 10);
                 multiplyMas[i + j] %= 10;
             }
         }
